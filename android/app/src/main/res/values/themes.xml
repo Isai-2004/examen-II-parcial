@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Contactos" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/sobre_primario</item>
+        <item name="colorSecondary">@color/verde</item>
+        <item name="colorError">@color/rojo</item>
+        <item name="android:windowBackground">@color/fondo</item>
+    </style>
+
+    <!-- Barra superior común a las tres pantallas -->
+    <style name="Barra">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/primario</item>
+        <item name="titleTextColor">@color/sobre_primario</item>
+        <item name="subtitleTextColor">@color/sobre_primario</item>
+    </style>
+</resources>

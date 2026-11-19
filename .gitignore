@@ -1,0 +1,17 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+api/src/Contactos.Api/contactos.db*
+api/src/Contactos.Api/almacen/
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/build/
+android/app/build/
+android/.kotlin/
+*.iml
+.DS_Store

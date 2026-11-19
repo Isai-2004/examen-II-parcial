@@ -1,0 +1,61 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+// La clave de Google Maps NO se sube al repositorio: se lee de local.properties
+// (línea MAPS_API_KEY=tu_clave). Si no hay clave, la app abre la ubicación en la app de Google Maps.
+def propiedadesLocales = new Properties()
+def archivoLocal = rootProject.file('local.properties')
+if (archivoLocal.exists()) {
+    archivoLocal.withInputStream { propiedadesLocales.load(it) }
+}
+def claveMaps = propiedadesLocales.getProperty('MAPS_API_KEY', '').trim()
+
+android {
+    namespace 'com.uth.contactos'
+    compileSdk {
+        version = release(37)
+    }
+
+    defaultConfig {
+        applicationId "com.uth.contactos"
+        minSdk 24
+        targetSdk 37
+        versionCode 1
+        versionName "1.0"
+
+        // Emulador: 10.0.2.2 es el "localhost" del PC donde corre la API.
+        // En un teléfono físico usa la IP del PC (ej. http://192.168.1.50:5080/)
+        // y agrégala en res/xml/network_security_config.xml.
+        buildConfigField "String", "API_BASE_URL", "\"http://10.0.2.2:5080/\""
+
+        manifestPlaceholders.put("MAPS_API_KEY", claveMaps)
+        buildConfigField "boolean", "MAPS_CONFIGURADO", claveMaps.isEmpty() ? "false" : "true"
+    }
+
+    buildTypes {
+        release {
+            optimization {
+                enable false
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.recyclerview
+    implementation libs.volley
+    implementation libs.play.services.location
+    implementation libs.play.services.maps
+}

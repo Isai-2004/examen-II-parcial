@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primario">#1F4E79</color>
+    <color name="sobre_primario">#FFFFFF</color>
+    <color name="verde">#1E8E3E</color>
+    <color name="azul">#2F6FDE</color>
+    <color name="rojo">#C62828</color>
+    <color name="fondo">#F5F7FA</color>
+    <color name="tinta_firma">#0D47A1</color>
+    <color name="borde">#B8C2CF</color>
+    <color name="seleccion">#DCE8FB</color>
+    <color name="texto_secundario">#5A6577</color>
+</resources>

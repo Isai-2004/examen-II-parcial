@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Contactos UTH</string>
+
+    <!-- Pantalla 1 -->
+    <string name="titulo_registro">Registro de contacto</string>
+    <string name="subtitulo_registro">UTH · Firma digital y ubicación</string>
+    <string name="etiqueta_firma">Firme dentro del recuadro</string>
+    <string name="limpiar_firma">Firma Digital · Limpiar</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Teléfono</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="salvar_contacto">Salvar Contacto</string>
+    <string name="contactos_salvados">Contactos Salvados</string>
+    <string name="buscando_ubicacion">Buscando ubicación…</string>
+
+    <!-- Pantalla 2 -->
+    <string name="titulo_lista">Contactos guardados</string>
+    <string name="buscar">Buscar</string>
+    <string name="sin_contactos">No hay contactos para mostrar.</string>
+    <string name="seleccione_contacto">Toque un contacto para ver su firma.</string>
+    <string name="eliminar_contacto">Eliminar</string>
+    <string name="actualizar_contacto">Actualizar</string>
+    <string name="llamar">Llamar</string>
+
+    <!-- Pantalla 3 -->
+    <string name="titulo_mapa">Ubicación</string>
+
+    <string name="descripcion_firma">Firma del contacto</string>
+</resources>

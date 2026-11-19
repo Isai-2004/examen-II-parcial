@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  En producción todo debe ir por HTTPS. Solo para pruebas locales se permite HTTP
+  hacia el PC de desarrollo: 10.0.2.2 = localhost del PC visto desde el emulador.
+  Si usas un teléfono físico, agrega aquí la IP del PC (ej. 192.168.1.50).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>
